@@ -31,4 +31,11 @@ public class FlightController {
         List<Flight> allFlights = this.flightService.getAllFlights();
         return new ResponseEntity<>(allFlights, HttpStatus.FOUND);
     }
+
+    @GetMapping("/something")
+    public ResponseEntity<String> getSomething(){
+
+        return new ResponseEntity<>("Something return from Akasa", HttpStatus.FOUND);
+    }
+
 }
